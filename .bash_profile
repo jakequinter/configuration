@@ -1,3 +1,4 @@
+export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="\u:\[\e[01;32m\]\w\[\e[0m\]\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
 export EDITOR='vim'
@@ -12,5 +13,3 @@ parse_git_branch() {
 bitcoin() {
     python3 /users/jakequinter/developer/jdq/fun/tools/web/main.py “$1”
 }
-
-
