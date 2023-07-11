@@ -1,0 +1,24 @@
+# ignore everything by default
+*
+
+# but not these files...
+!.gitignore
+!.tmux.conf
+!.wezterm.lua
+!.zshrc
+
+
+# include .config directory
+!.config/
+
+# exclude all contents of .config directory
+.config/*
+.config/**/*
+
+# but not these
+!.config/nvim/
+
+
+# and not hese subdirectories
+!.config/nvim/**
+
