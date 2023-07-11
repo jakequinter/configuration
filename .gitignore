@@ -1,4 +1,4 @@
-# ignore everything by default
+# ignore evjrything by default
 *
 
 # but not these files...
@@ -7,18 +7,12 @@
 !.wezterm.lua
 !.zshrc
 
-
 # include .config directory
 !.config/
 
-# exclude all contents of .config directory
-.config/*
-.config/**/*
-
-# but not these
+# exclude all contents of .config directory except .config/nvim/
+.config/**
 !.config/nvim/
 
-
-# and not hese subdirectories
+# include all files and subdirectories inside .config/nvim/
 !.config/nvim/**
-
