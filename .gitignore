@@ -1,18 +1,19 @@
-# ignore evjrything by default
-*
+# ignore everything by default
+/*
+*.DS_Store
 
-# but not these files...
+# but not these files
 !.gitignore
 !.tmux.conf
 !.wezterm.lua
 !.zshrc
 
-# include .config directory
-!.config/
+# allow .config directory
+!/.config
 
-# exclude all contents of .config directory except .config/nvim/
-.config/**
-!.config/nvim/
+# ignore everything in .config by default
+/.config/*
 
-# include all files and subdirectories inside .config/nvim/
-!.config/nvim/**
+# but not these dirs
+!/.config/kitty
+!/.config/nvim
