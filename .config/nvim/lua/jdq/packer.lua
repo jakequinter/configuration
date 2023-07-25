@@ -39,7 +39,11 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use("nvim-treesitter/nvim-treesitter-context");
-  use('rust-lang/rust.vim')
+  use({ 
+    'rust-lang/rust.vim', config = function()
+      vim.cmd('let g:rustfmt_autosave = 1')
+  end 
+  })
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
