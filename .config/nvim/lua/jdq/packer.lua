@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'github/copilot.vim'
   use 'theprimeagen/harpoon'
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
 
   use {
     'numToStr/Comment.nvim',
