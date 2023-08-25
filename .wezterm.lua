@@ -18,6 +18,7 @@ end
 
 config.font = wezterm.font("Berkeley Mono", {weight="Regular", style="Normal"})
 config.font_size = 13.0
+config.window_background_opacity = 0.87
 
 -- timeout_milliseconds defaults to 1000 and can be omitted
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
