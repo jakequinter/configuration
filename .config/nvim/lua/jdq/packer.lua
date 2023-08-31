@@ -11,6 +11,12 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
 
+  -- if use nvim-web-devicons
+  use {
+    'yamatsum/nvim-nonicons',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
+
   use {
     'numToStr/Comment.nvim',
     config = function()
