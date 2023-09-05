@@ -48,6 +48,9 @@ return require('packer').startup(function(use)
   end 
   })
 
+ use { "j-hui/fidget.nvim", branch = "legacy" }
+  
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
