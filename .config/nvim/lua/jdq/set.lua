@@ -10,6 +10,7 @@ vim.opt.expandtab = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
+vim.opt.cursorline = true
 
 vim.opt.termguicolors = true
 

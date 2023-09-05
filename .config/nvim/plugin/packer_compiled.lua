@@ -230,10 +230,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
--- Config for: rust.vim
-time([[Config for rust.vim]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\31let g:rustfmt_autosave = 1\bcmd\bvim\0", "config", "rust.vim")
-time([[Config for rust.vim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
@@ -242,6 +238,10 @@ time([[Config for Comment.nvim]], false)
 time([[Config for gruvbox]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme gruvbox\bcmd\bvim\0", "config", "gruvbox")
 time([[Config for gruvbox]], false)
+-- Config for: rust.vim
+time([[Config for rust.vim]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\31let g:rustfmt_autosave = 1\bcmd\bvim\0", "config", "rust.vim")
+time([[Config for rust.vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
