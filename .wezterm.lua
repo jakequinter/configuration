@@ -69,7 +69,7 @@ config.keys = {
   -- fzf search for Developer/merryfield and Developer/jdq
   {
     key = 'f',
-    mods = 'LEADER',
+    mods = 'CTRL',
     action= wezterm.action{SendString="cd \"$( ( find ~/Developer/merryfield -maxdepth 1 -type d ; find ~/Developer/jdq -maxdepth 1 -type d ) | fzf )\"\n"},
   },
   -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
