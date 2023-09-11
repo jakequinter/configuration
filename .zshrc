@@ -102,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/opt/homebrew/bin:$PATH"
 alias vim="nvim"
+alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
 
 # pnpm
 export PNPM_HOME="/Users/jakequinter/Library/pnpm"

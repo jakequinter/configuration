@@ -10,8 +10,12 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use 'rcarriga/nvim-notify'
 
-  -- if use nvim-web-devicons
+  -- auto close brackets and tags
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag' 
+
   use {
     'yamatsum/nvim-nonicons',
     requires = {'kyazdani42/nvim-web-devicons'}
