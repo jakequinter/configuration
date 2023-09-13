@@ -1,6 +1,10 @@
 require('rose-pine').setup({
   disable_background = true,
-  disable_italics = true
+  disable_italics = true,
+  highlight_groups = {
+    Comment = { italic = true },
+    Type = { italic = true },
+  }
 })
 
 require('gruvbox').setup({
