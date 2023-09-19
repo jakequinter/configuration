@@ -1,6 +1,11 @@
 local null_ls = require("null-ls")
 
+local formatting = null_ls.builtins.formatting
+
 null_ls.setup({
+  sources = {
+    formatting.ocamlformat,
+  },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.keymap.set("n", "<Leader>f", function()

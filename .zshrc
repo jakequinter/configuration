@@ -112,3 +112,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# opam configuration
+[[ ! -r /Users/jakequinter/.opam/opam-init/init.zsh ]] || source /Users/jakequinter/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
