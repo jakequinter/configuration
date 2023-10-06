@@ -104,7 +104,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias vim="nvim"
 alias dcu="docker compose up"
 alias dcub="docker compose up --build"
-alias dcb="docker compose down"
+alias dcd="docker compose down"
 
 # pnpm
 export PNPM_HOME="/Users/jakequinter/Library/pnpm"
