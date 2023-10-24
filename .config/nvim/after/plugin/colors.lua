@@ -37,10 +37,14 @@ local schemes = {
             },
         })
     end,    
+    ["gruvbuddy"] = function()
+        require('colorbuddy').setup()
+        require('colorbuddy').colorscheme('gruvbuddy')
+    end,
 }
 
 local function ColorMyPencils(color)
-    color = color or "kanagawa"
+    color = color or "gruvbuddy"
 
     -- Call the setup function for the chosen colorscheme
     if schemes[color] ~= nil then
@@ -54,6 +58,7 @@ local function ColorMyPencils(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, 'LineNr', {bg='none'})
 end
 
 ColorMyPencils()
