@@ -1,31 +1,59 @@
-require('rose-pine').setup({
-  disable_background = true,
-  disable_italics = true,
-  highlight_groups = {
-    Comment = { italic = true },
-    Type = { italic = true },
-  }
-})
+local schemes = {
+    ["rose-pine"] = function()
+        require('rose-pine').setup({
+            disable_background = true,
+            disable_italics = true,
+            highlight_groups = {
+                Comment = { italic = true },
+                Type = { italic = true },
+            }
+        })
+    end,
+    ["gruvbox"] = function()
+        require('gruvbox').setup({
+            disable_background = true,
+            bold = false,
+            italic = {
+                strings = false,
+                comments = true,
+                operators = false,
+                folds = false,
+            },
+        })
+    end,
+    ["kanagawa"] = function()
+        require('kanagawa').setup({
+            colors = {
+                theme = {
+                    all = {
+                        ui = {
+                            bg_gutter = "none"
+                        }
+                    }
+                }
+            },
+            background = {
+                dark = "dragon",
+            },
+        })
+    end,    
+}
 
-require('gruvbox').setup({
-  disable_background = true,
-  bold = false,
-  italic = {
-    strings = false,
-    comments = true,
-    operators = false,
-    folds = false,
-  },
-})
+local function ColorMyPencils(color)
+    color = color or "kanagawa"
 
-function ColorMyPencils(color) 
-color = color or "rose-pine"
--- color = color or "gruvbox"
-vim.cmd.colorscheme(color)
+    -- Call the setup function for the chosen colorscheme
+    if schemes[color] ~= nil then
+        schemes[color]()
+    else
+        print("Color scheme not found: " .. color)
+    end
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    -- Switch to the chosen colorscheme
+    vim.cmd("colorscheme "..color)
 
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 ColorMyPencils()
