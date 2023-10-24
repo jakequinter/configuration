@@ -23,9 +23,6 @@ config.font = wezterm.font_with_fallback {
 }
 config.font_size = 13.0
 -- config.window_background_opacity = 0.87
-config.colors = {
-  background = "#0D0D0D",
-}
 
 config.tab_bar_at_bottom = true
 

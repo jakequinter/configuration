@@ -37,14 +37,10 @@ local schemes = {
             },
         })
     end,    
-    ["gruvbuddy"] = function()
-        require('colorbuddy').setup()
-        require('colorbuddy').colorscheme('gruvbuddy')
-    end,
 }
 
 local function ColorMyPencils(color)
-    color = color or "gruvbuddy"
+    color = color or "kanagawa"
 
     -- Call the setup function for the chosen colorscheme
     if schemes[color] ~= nil then

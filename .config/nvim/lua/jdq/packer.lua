@@ -15,8 +15,6 @@ return require('packer').startup(function(use)
   -- auto close brackets and tags
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag' 
-  use 'tjdevries/colorbuddy.vim'
-  use 'tjdevries/gruvbuddy.nvim'
   
   use {
     'yamatsum/nvim-nonicons',
