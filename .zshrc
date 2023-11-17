@@ -120,3 +120,10 @@ esac
 
 # opam configuration
 [[ ! -r /Users/jakequinter/.opam/opam-init/init.zsh ]] || source /Users/jakequinter/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# bun completions
+[ -s "/Users/jakequinter/.bun/_bun" ] && source "/Users/jakequinter/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
