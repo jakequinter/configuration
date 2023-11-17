@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use("nvim-treesitter/nvim-treesitter-context");
+  use "reasonml-editor/vim-reason-plus"
   use({ 
     'rust-lang/rust.vim', config = function()
       vim.cmd('let g:rustfmt_autosave = 1')
