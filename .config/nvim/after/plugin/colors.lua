@@ -9,34 +9,16 @@ local schemes = {
             }
         })
     end,
-    ["gruvbox"] = function()
-        require('gruvbox').setup({
-            disable_background = true,
-            bold = false,
-            italic = {
-                strings = false,
-                comments = true,
-                operators = false,
-                folds = false,
-            },
-        })
+    ["gruvbox-material"] = function()
+      vim.cmd [[ set background=dark ]]
+
+      vim.g.gruvbox_material_background = 'soft'
+      vim.g.gruvbox_material_foreground = 'material'
+      vim.g.gruvbox_material_ui_contrast = 'high'
+      vim.g.gruvbox_material_float_style = 'dim'
+      vim.g.gruvbox_material_statusline_style = 'material'
+      vim.g.gruvbox_material_better_performance = 1
     end,
-    ["kanagawa"] = function()
-        require('kanagawa').setup({
-            colors = {
-                theme = {
-                    all = {
-                        ui = {
-                            bg_gutter = "none"
-                        }
-                    }
-                }
-            },
-            background = {
-                dark = "dragon",
-            },
-        })
-    end,    
     ["gruvbuddy"] = function()
         local Color, colors, Group, groups, styles = require('colorbuddy').setup()
     
@@ -59,7 +41,7 @@ local schemes = {
 }
 
 local function ColorMyPencils(color)
-    color = color or "gruvbuddy"
+    color = color or "gruvbox-material"
 
     -- Call the setup function for the chosen colorscheme
     if schemes[color] ~= nil then

@@ -15,8 +15,12 @@ return require('packer').startup(function(use)
   -- auto close brackets and tags
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag' 
+
+  -- colorschemes
   use 'tjdevries/colorbuddy.vim'
   use 'tjdevries/gruvbuddy.nvim'
+  use 'sainnhe/gruvbox-material'
+  use 'rose-pine/neovim'
   
   use {
     'yamatsum/nvim-nonicons',
@@ -34,22 +38,6 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  use({ 
-    'rose-pine/neovim', as = 'rose-pine', config = function()
-    vim.cmd('colorscheme rose-pine')
-  end 
-  })
-
-  use({ 'ellisonleao/gruvbox.nvim', as = 'gruvbox', config = function()
-    vim.cmd('colorscheme gruvbox')
-  end 
-  })
-
-  use({ 'rebelot/kanagawa.nvim', as = "kanagawa", config = function()
-    vim.cmd('colorscheme kanagawa')
-  end 
-  })
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use("nvim-treesitter/nvim-treesitter-context");
