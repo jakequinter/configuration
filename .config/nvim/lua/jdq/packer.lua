@@ -20,7 +20,8 @@ return require('packer').startup(function(use)
   use 'tjdevries/colorbuddy.vim'
   use 'tjdevries/gruvbuddy.nvim'
   use 'sainnhe/gruvbox-material'
-  use 'rose-pine/neovim'
+  use 'rose-pine/neovim' 
+  use 'catppuccin/nvim'
   
   use {
     'yamatsum/nvim-nonicons',
@@ -54,6 +55,7 @@ return require('packer').startup(function(use)
   }
 
  use { "j-hui/fidget.nvim", branch = "legacy" }
+ use 'lukas-reineke/indent-blankline.nvim'
   
 
   use {
