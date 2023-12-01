@@ -13,8 +13,9 @@ end
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
--- config.color_scheme = 'Batman'
+-- set default cols/rows
+config.initial_rows = 84
+config.initial_cols = 318
 
 -- config.font = wezterm.font("Berkeley Mono", {weight="Regular", style="Normal"})
 config.font = wezterm.font_with_fallback {
