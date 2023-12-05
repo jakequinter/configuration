@@ -22,29 +22,74 @@ local schemes = {
       vim.g.gruvbox_material_enable_italic = 1
     end,
     ["gruvbuddy"] = function()
-        local Color, colors, Group, groups, styles = require('colorbuddy').setup()
-    
-        -- Use Color.new(<name>, <#rrggbb>) to create new colors
-        -- They can be accessed through colors.<name>
-        Color.new('background',  '#282c34')
-        Color.new('red',         '#cc6666')
-        Color.new('green',       '#99cc99')
-        Color.new('yellow',      '#f0c674')
-
-        -- Define highlights in terms of `colors` and `groups`
-        Group.new('Function'        , colors.yellow      , colors.background , styles.bold)
-        Group.new('luaFunctionCall' , groups.Function    , groups.Function   , groups.Function)
-
-        -- Define highlights in relative terms of other colors
-        Group.new('Error'           , colors.red:light() , nil               , styles.bold)
-
-
         require('colorbuddy').colorscheme('gruvbuddy')
-    end,
+
+        local Color = require('colorbuddy.init').Color
+        local c = require('colorbuddy.init').colors
+        local Group = require('colorbuddy.init').Group
+        local g = require('colorbuddy.init').groups
+        local s = require('colorbuddy.init').styles
+
+        Group.new("@variable", c.superwhite, nil)
+
+        Group.new("TSPunctBracket", c.orange:light():light())
+        -- group for jsx/tsx
+        Group.new("@operator.tsx", c.cyan)
+        Group.new("@tag.delimiter.tsx", c.cyan)
+        Group.new("variable.tsx", c.purple:light()) Group.new("@tag.tsx", c.purple:light())
+        Group.new("@tag.attribute.tsx", c.purple:light():light())
+        Group.new("@keyword.export.tsx", c.cyan)
+        Group.new("@constructor.tsx", c.orange)
+
+        Group.new("StatuslineError1", c.red:light():light(), g.Statusline)
+        Group.new("StatuslineError2", c.red:light(), g.Statusline)
+        Group.new("StatuslineError3", c.red, g.Statusline)
+        Group.new("StatuslineError3", c.red:dark(), g.Statusline)
+        Group.new("StatuslineError3", c.red:dark():dark(), g.Statusline)
+
+        Group.new("WinSeparator", nil, nil)
+
+        Group.new("LspParameter", nil, nil, s.italic)
+        Group.new("LspDeprecated", nil, nil, s.strikethrough)
+        Group.new("@function.bracket", g.Normal, g.Normal)
+        Group.new("@variable.builtin", c.purple:light():light(), g.Normal)
+
+        Group.new("VirtNonText", c.gray3:dark(), nil, s.italic)
+
+        Group.new("TreesitterContext", nil, g.Normal.bg:light())
+        Group.new("TreesitterContextLineNumber", c.blue)
+
+        Group.new("@property", c.blue)
+        Group.new("@punctuation.bracket.rapper", c.gray3, nil, s.none)
+        Group.new("@rapper_argument", c.red, nil, s.italic)
+        Group.new("@rapper_return", c.orange:light(), nil, s.italic)
+        Group.new("@constructor.ocaml", c.orange:light(), nil, s.none)
+        Group.new("@constructor.typescript", c.orange:light(), nil, s.none)
+        Group.new("constant", c.orange, nil, s.none)
+
+        Group.new("@keyword", c.violet, nil, s.none)
+        Group.new("@keyword.faded", g.nontext.fg:light(), nil, s.none)
+
+        Group.new("Function", c.yellow, nil, s.none)
+        vim.cmd [[
+          hi link @function.call.lua LuaFunctionCall
+          hi link @lsp.type.variable.lua variable
+          hi link @lsp.type.variable.ocaml variable
+          hi link @lsp.type.variable.javascript variable
+          hi link @lsp.type.variable.javascriptreact variable
+          hi link @lsp.type.variable.typescript variable
+          hi link @lsp.type.variable.typescriptreact variable
+          hi link @lsp.type.namespace @namespace
+          hi link @punctuation.bracket.rapper @text.literal
+          hi link @normal Normal
+        ]]
+
+        Group.new("Normal", c.superwhite, c.gray0)
+    end
 }
 
 local function ColorMyPencils(color)
-    color = color or "catppuccin"
+    color = color or "gruvbuddy"
 
     -- Call the setup function for the chosen colorscheme
     if schemes[color] ~= nil then
@@ -55,13 +100,9 @@ local function ColorMyPencils(color)
 
     -- Switch to the chosen colorscheme
     vim.cmd("colorscheme "..color)
-
-    -- only do this for certain colorschemes
-    if color == "gruvbox-material" or color == "gruvbuddy" or color == "catppuccin" then
-        vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
-        vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
-        vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
-    end
+    vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+    vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
+    vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
 end
 
 ColorMyPencils()

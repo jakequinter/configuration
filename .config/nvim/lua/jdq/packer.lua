@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   }
+  -- use 'lukas-reineke/indent-blankline.nvim'
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -42,6 +43,7 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use("nvim-treesitter/nvim-treesitter-context");
+  use 'nvim-treesitter/playground'
   use "reasonml-editor/vim-reason-plus"
   use({ 
     'rust-lang/rust.vim', config = function()
@@ -55,7 +57,7 @@ return require('packer').startup(function(use)
   }
 
  use { "j-hui/fidget.nvim", branch = "legacy" }
- use 'lukas-reineke/indent-blankline.nvim'
+ -- use 'lukas-reineke/indent-blankline.nvim'
   
 
   use {
