@@ -16,6 +16,3 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
-vim.updatetime = 50
-
-vim.opt.clipboard:append("unnamedplus")
