@@ -71,7 +71,7 @@ return {
 
       vim.cmd("colorscheme ".."gruvbuddy")
       vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
-      vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
+      vim.cmd("hi NormalFloat guibg=#222222 ctermbg=NONE")
       vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
 	end
 }

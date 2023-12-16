@@ -95,8 +95,8 @@ return {
 
 			-- Default handlers for LSP
 			local default_handlers = {
-				["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-				["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+				["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {}),
+				["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {}),
 			}
 
 			-- nvim-cmp supports additional completion capabilities
@@ -104,7 +104,7 @@ return {
 			local default_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 			---@diagnostic disable-next-line: unused-local
-			local on_attach = function(_client, buffer_number)
+			local on_attach = function(client, bufner)
       local opts = {buffer = bufner, remap = false}
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
