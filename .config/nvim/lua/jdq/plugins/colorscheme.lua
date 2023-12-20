@@ -5,24 +5,24 @@ return {
   },
   config = function()
     require('colorbuddy').colorscheme('gruvbuddy')
-      local Color = require('colorbuddy.init').Color
-      local c = require('colorbuddy.init').colors
-      local Group = require('colorbuddy.init').Group
-      local g = require('colorbuddy.init').groups
-      local s = require('colorbuddy.init').styles
+      local cb = require("colorbuddy.init")
+      -- local Color = require('colorbuddy.init').Color
+      local c = cb.colors
+      local Group = cb.Group
+      local g = cb.groups
+      local s = cb.styles
 
       Group.new("@variable", c.superwhite, nil)
 
       Group.new("TSPunctBracket", c.orange:light():light())
       -- group for jsx/tsx
-      Group.new("@operator.tsx", c.cyan)
-      Group.new("@operator.tsx", c.cyan)
-      Group.new("@tag.delimiter.tsx", c.cyan)
-      Group.new("variable.tsx", c.purple:light()) 
-      Group.new("@tag.tsx", c.purple:light())
-      Group.new("@tag.attribute.tsx", c.purple:light():light())
+      Group.new("@operator.tsx", c.gray3)
+      Group.new("@tag.delimiter.tsx", c.gray3)
+      Group.new("variable.tsx", c.yellow)
+      Group.new("@tag.tsx", c.yellow)
+      Group.new("@tag.attribute.tsx", c.violet)
       Group.new("@keyword.export.tsx", c.cyan)
-      Group.new("@constructor.tsx", c.orange)
+      Group.new("@constructor.tsx", c.blue)
 
       Group.new("StatuslineError1", c.red:light():light(), g.Statusline)
       Group.new("StatuslineError2", c.red:light(), g.Statusline)
