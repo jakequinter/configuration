@@ -66,7 +66,7 @@ return {
 				vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
 			end
 
-			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
+			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers)
 			local servers = {
 				lua_ls = {
 					settings = {
@@ -77,6 +77,7 @@ return {
 					},
 				},
 				ocamllsp = {},
+        pyright = {},
 				tailwindcss = {},
 				tsserver = {
 					settings = {
