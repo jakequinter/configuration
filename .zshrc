@@ -106,9 +106,16 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/opt/homebrew/bin:$PATH"
 alias vim="nvim"
+
+# docker
 alias dcu="docker compose up"
+alias dcb="docker compose build"
 alias dcub="docker compose up --build"
 alias dcd="docker compose down"
+
+# alembic
+alias man="make alembic-new"
+alias mar="make alembic-refresh"
 
 # pnpm
 export PNPM_HOME="/Users/jakequinter/Library/pnpm"
