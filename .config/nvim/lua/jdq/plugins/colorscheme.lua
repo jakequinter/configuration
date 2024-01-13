@@ -18,7 +18,7 @@ return {
         }
       })
 
-      -- ColorMyPencils()
+      ColorMyPencils()
     end
   },
 
@@ -99,7 +99,7 @@ return {
 
         vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
 
-        ColorMyPencils("gruvbuddy")
+        -- ColorMyPencils("gruvbuddy")
     end
   },
 }

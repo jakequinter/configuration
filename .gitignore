@@ -15,5 +15,10 @@
 /.config/*
 
 # but not these dirs
+!/.config/fish
 !/.config/kitty
 !/.config/nvim
+
+# and not these files
+!/.config/starship.toml
+

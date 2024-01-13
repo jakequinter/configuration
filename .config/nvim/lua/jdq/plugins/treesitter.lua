@@ -4,7 +4,7 @@ return {
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
-          "vimdoc", "javascript", "typescript", "c", "lua", "rust", "ocaml", "python"
+          "vimdoc", "javascript", "typescript", "c", "lua", "rust", "ocaml", "python", "eex", "elixir", "erlang", "heex",
 				},
 				sync_install = false,
 				indent = {
