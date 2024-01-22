@@ -2,6 +2,12 @@
 # Fish uses `fish_add_path` instead of `export PATH` modify $PATH.
 fish_add_path "/opt/homebrew/bin/"
 
+# disabling for now, speed is more important
+# function fish_greeting -d "Greeting message on shell session start up"
+#   neofetch 
+# end
+set fish_greeting
+
 # Enable Starship prompt
 starship init fish | source
 
@@ -29,8 +35,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# disabling for now, speed is more important
-# function fish_greeting -d "Greeting message on shell session start up"
-#   neofetch 
-# end
-set fish_greeting
+# opam configuration
+if test -r /Users/jakequinter/.opam/opam-init/init.fish
+    source /Users/jakequinter/.opam/opam-init/init.fish > /dev/null ^ /dev/null
+end
+
