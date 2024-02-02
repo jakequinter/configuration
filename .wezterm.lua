@@ -72,7 +72,6 @@ config.keys = {
 		key = "f",
 		mods = "CTRL",
 		action = wezterm.action({
-			-- SendString="cd \"$( ( find ~/Developer/merryfield -maxdepth 1 -type d ; find ~/Developer/proprius -maxdepth 1 -type d ; find ~/Developer/jdq -maxdepth 1 -type d ; find ~/Developer/client-sites -maxdepth 1 -type d ; find ~/Developer/ocaml -maxdepth 1 -type d ) | fzf )\"\n"},
 			SendString = "cd (begin; find ~/Developer/merryfield -maxdepth 1 -type d; find ~/Developer/proprius -maxdepth 1 -type d; find ~/Developer/jdq -maxdepth 1 -type d; find ~/Developer/client-sites -maxdepth 1 -type d; find ~/Developer/ocaml -maxdepth 1 -type d; end | fzf)\n",
 		}),
 	},

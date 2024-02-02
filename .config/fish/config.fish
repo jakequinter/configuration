@@ -40,3 +40,6 @@ if test -r /Users/jakequinter/.opam/opam-init/init.fish
     source /Users/jakequinter/.opam/opam-init/init.fish > /dev/null ^ /dev/null
 end
 
+# wezterm
+set -U fish_user_paths /Applications/WezTerm.app/Contents/MacOS $fish_user_paths
+
