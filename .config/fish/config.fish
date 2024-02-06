@@ -31,6 +31,9 @@ alias dcd="docker compose down"
 alias man="make alembic-new"
 alias mar="make alembic-refresh"
 
+alias treporting="docker-compose -f docker-compose.yml run reporting-app-client npm run test"
+alias tcsr="docker-compose -f docker-compose.yml run csr-app-client npm run test"
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end

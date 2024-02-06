@@ -15,10 +15,6 @@ return {
 					"rust",
 					"ocaml",
 					"python",
-					"eex",
-					"elixir",
-					"erlang",
-					"heex",
 				},
 				sync_install = false,
 				indent = {
