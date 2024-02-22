@@ -3,9 +3,9 @@
 fish_add_path "/opt/homebrew/bin/"
 
 # disabling for now, speed is more important
-# function fish_greeting -d "Greeting message on shell session start up"
-#   neofetch 
-# end
+function fish_greeting -d "Greeting message on shell session start up"
+  neofetch 
+end
 set fish_greeting
 
 # Enable Starship prompt

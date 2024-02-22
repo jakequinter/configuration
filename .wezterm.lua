@@ -13,7 +13,7 @@ end
 
 -- This is where you actually apply your config choices
 
--- config.color_scheme = "OneDark (base16)"
+config.color_scheme = "Bright (base16)"
 
 -- set default cols/rows
 config.initial_rows = 84
