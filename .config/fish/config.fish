@@ -2,9 +2,16 @@
 # Fish uses `fish_add_path` instead of `export PATH` modify $PATH.
 fish_add_path "/opt/homebrew/bin/"
 
-# disabling for now, speed is more important
+set -U neofetch_run_once 0
+
 function fish_greeting -d "Greeting message on shell session start up"
-  neofetch 
+  set -l current_pid %self
+  set -l lowest_pid (ps -eo pid=,args= | string match '*fish*' | awk '{print $1}' | sort -n | head -n 1)
+
+  # run neofetch on first shell
+  if test "$current_pid" -eq "$lowest_pid"
+    neofetch
+  end
 end
 set fish_greeting
 
