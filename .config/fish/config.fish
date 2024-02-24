@@ -31,15 +31,23 @@ set -gx PATH $BUN_INSTALL/bin $PATH
 
 # alias
 alias vim="nvim"
+
+# docker 
 alias dcu="docker compose up"
 alias dcb="docker compose build"
 alias dcub="docker compose up --build"
 alias dcd="docker compose down"
 alias man="make alembic-new"
 alias mar="make alembic-refresh"
-
 alias treporting="docker-compose -f docker-compose.yml run reporting-app-client npm run test"
 alias tcsr="docker-compose -f docker-compose.yml run csr-app-client npm run test"
+
+# git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gp="git pull"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
