@@ -45,9 +45,10 @@ alias tcsr="docker-compose -f docker-compose.yml run csr-app-client npm run test
 # git
 alias gs="git status"
 alias ga="git add"
+alias gbd="git branch -D"
 alias gc="git commit"
 alias gp="git push"
-alias gp="git pull"
+alias gpp="git pull"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
