@@ -77,6 +77,7 @@ alias tcsr="docker-compose -f docker-compose.yml run csr-app-client npm run test
 # git
 alias gs="git status"
 alias ga="git add"
+alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git commit"
 alias gp="git push"
