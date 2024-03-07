@@ -13,4 +13,4 @@ vim.opt.cursorline = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 10
