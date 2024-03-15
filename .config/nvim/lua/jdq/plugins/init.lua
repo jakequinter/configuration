@@ -1,3 +1,4 @@
 return {
-  "github/copilot.vim"
+	"github/copilot.vim",
+	"norcalli/nvim-colorizer.lua",
 }
