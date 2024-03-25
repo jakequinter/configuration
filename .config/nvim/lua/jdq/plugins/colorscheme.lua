@@ -22,26 +22,26 @@ return {
 	-- 	end,
 	-- },
 
-	{
-		"tyrannicaltoucan/vim-deep-space",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("colorizer").setup()
-			vim.api.nvim_set_option("background", "dark")
-			vim.cmd("colorscheme deep-space")
-		end,
-	},
-
 	-- {
-	-- 	"CodeGradox/onehalf-lush",
+	-- 	"tyrannicaltoucan/vim-deep-space",
 	-- 	lazy = false,
 	-- 	priority = 1000,
 	-- 	config = function()
+	-- 		require("colorizer").setup()
 	-- 		vim.api.nvim_set_option("background", "dark")
-	-- 		vim.cmd("colorscheme onehalf-lush-dark")
+	-- 		vim.cmd("colorscheme deep-space")
 	-- 	end,
 	-- },
+
+	{
+		"CodeGradox/onehalf-lush",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.api.nvim_set_option("background", "dark")
+			vim.cmd("colorscheme onehalf-lush-dark")
+		end,
+	},
 
 	-- {
 	-- 	"tjdevries/colorbuddy.vim",
