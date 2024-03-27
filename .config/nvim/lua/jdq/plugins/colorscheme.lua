@@ -50,6 +50,7 @@ return {
 			Color.new("NvimLightCyan", "#FABD2F")
 
 			Group.new("@tag.attribute.tsx", colors.violet)
+			Group.new("WinSeparator", nil, nil)
 
 			vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 			vim.cmd("hi LineNr guibg=NONE ctermbg=NONE")
