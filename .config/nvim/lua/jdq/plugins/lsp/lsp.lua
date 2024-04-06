@@ -51,6 +51,11 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["elixirls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		lspconfig["html"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
