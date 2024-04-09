@@ -52,6 +52,7 @@ return {
 		})
 
 		lspconfig["elixirls"].setup({
+			cmd = { os.getenv("HOME") .. "/.local/share/nvim/mason/bin/elixir-ls" },
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
