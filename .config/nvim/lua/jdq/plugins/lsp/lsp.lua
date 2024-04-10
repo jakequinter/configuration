@@ -93,6 +93,14 @@ return {
 		lspconfig["tailwindcss"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes_include = { "heex" },
+			init_options = {
+				userLanguages = {
+					elixir = "html-eex",
+					eelixir = "html-eex",
+					heex = "html-eex",
+				},
+			},
 		})
 
 		lspconfig["tsserver"].setup({
