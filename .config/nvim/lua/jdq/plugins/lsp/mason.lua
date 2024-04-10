@@ -18,7 +18,6 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"cssls",
-				"elixirls",
 				"html",
 				"lua_ls",
 				"ocamllsp",
