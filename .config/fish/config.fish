@@ -82,6 +82,7 @@ alias gbd="git branch -D"
 alias gc="git commit"
 alias gp="git push"
 alias gpp="git pull"
+alias gc="git checkout"
 alias gcb="git checkout -b"
 
 if status is-interactive
