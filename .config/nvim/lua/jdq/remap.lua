@@ -11,5 +11,5 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("n", "<C-,>", "<c-w>5<")
 vim.keymap.set("n", "<C-.>", "<c-w>5>")
-vim.keymap.set("n", "<C-u>", "<c-w>+>")
-vim.keymap.set("n", "<C-d>", "<c-w>-")
+vim.keymap.set("n", "<C-t>", "<c-w>+>")
+vim.keymap.set("n", "<C-s>", "<c-w>-")
