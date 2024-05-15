@@ -14,7 +14,7 @@ return {
 				["<C-p>"] = false,
 				["<C-c>"] = "actions.close",
 				["<C-l>"] = "actions.refresh",
-				["-"] = "actions.parent",
+				["-"] = false,
 				["_"] = "actions.open_cwd",
 				["`"] = "actions.cd",
 				["~"] = "actions.tcd",
@@ -22,6 +22,9 @@ return {
 				["gx"] = "actions.open_external",
 				["g."] = "actions.toggle_hidden",
 				["g\\"] = "actions.toggle_trash",
+			},
+			view_options = {
+				show_hidden = true,
 			},
 		})
 	end,
