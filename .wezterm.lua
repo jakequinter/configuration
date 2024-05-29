@@ -69,12 +69,11 @@ config.keys = {
 		mods = "CMD",
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
-	-- fzf search for Developer/merryfield and Developer/jdq
 	{
 		key = "f",
 		mods = "CTRL",
 		action = wezterm.action({
-			SendString = "cd (begin; find ~/Developer/onramp -maxdepth 1 -type d; find ~/Developer/merryfield -maxdepth 1 -type d; find ~/Developer/proprius -maxdepth 1 -type d; find ~/Developer/jdq -maxdepth 1 -type d; find ~/Developer/client-sites -maxdepth 1 -type d; find ~/Developer/ocaml -maxdepth 1 -type d; find ~/Developer/client-sites -maxdepth 1 -type d; find ~/Developer/elixir -maxdepth 1 -type d; end | fzf)\n",
+			SendString = "cd (begin; find ~/Developer/onramp -maxdepth 1 -type d; find ~/Developer/jdq -maxdepth 1 -type d; find ~/Developer/client-sites -maxdepth 1 -type d; find ~/Developer/ocaml -maxdepth 1 -type d; find ~/Developer/client-sites -maxdepth 1 -type d; find ~/Developer/elixir -maxdepth 1 -type d; end | fzf)\n",
 		}),
 	},
 	-- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
