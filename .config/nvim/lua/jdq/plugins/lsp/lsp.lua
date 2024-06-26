@@ -39,10 +39,9 @@ return {
 			vim.keymap.set("n", "<leader>vrn", function()
 				vim.lsp.buf.rename()
 			end, opts)
-			vim.keymap.set("n", "<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts)
-			vim.keymap.set("i", "<C-h>", function()
-				vim.lsp.buf.signature_help()
-			end, opts)
+			-- vim.keymap.set("i", "<C-h>", function()
+			-- 	vim.lsp.buf.signature_help()
+			-- end, opts)
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -110,6 +109,11 @@ return {
 		})
 
 		lspconfig["pyright"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["rescriptls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

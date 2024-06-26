@@ -21,6 +21,7 @@ return {
 				"html",
 				"lua_ls",
 				"ocamllsp",
+				"rescriptls",
 				"pyright",
 				"tailwindcss",
 				"tsserver",
