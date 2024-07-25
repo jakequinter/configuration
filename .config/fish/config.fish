@@ -63,6 +63,7 @@ set -gx PATH $BUN_INSTALL/bin $PATH
 
 # alias
 alias vim="nvim"
+alias vt='vim "+terminal"'
 
 # docker 
 alias dcu="docker compose up"
