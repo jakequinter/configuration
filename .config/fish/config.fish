@@ -86,7 +86,7 @@ alias gpp="git pull"
 alias gcb="git checkout -b"
 
 # lsd
-alias ls='lsd'
+alias ls='lsd --icon never'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
