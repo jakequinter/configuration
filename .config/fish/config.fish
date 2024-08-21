@@ -85,6 +85,13 @@ alias gp="git push"
 alias gpp="git pull"
 alias gcb="git checkout -b"
 
+# lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
