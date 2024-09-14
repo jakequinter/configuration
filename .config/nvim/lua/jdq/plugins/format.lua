@@ -18,6 +18,7 @@ return {
 				lua = { "stylua" },
 
 				ocaml = { "ocamlformat" },
+				ocaml_mlx = { "ocamlformat_mlx" },
 
 				python = { "isort", "black" },
 			},

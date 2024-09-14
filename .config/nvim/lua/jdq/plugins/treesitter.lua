@@ -15,6 +15,7 @@ return {
 					"rust",
 					"ocaml",
 					"python",
+					"ocaml_mlx",
 				},
 				sync_install = false,
 				indent = {
