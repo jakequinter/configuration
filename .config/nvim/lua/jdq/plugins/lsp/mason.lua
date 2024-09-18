@@ -24,7 +24,7 @@ return {
 				"rescriptls",
 				"pyright",
 				"tailwindcss",
-				"tsserver",
+				"ts_ls",
 			},
 			-- auto-install with lspconfig
 			automatic_installation = true,

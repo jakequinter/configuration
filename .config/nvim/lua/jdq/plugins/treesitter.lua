@@ -14,8 +14,8 @@ return {
 					"lua",
 					"rust",
 					"ocaml",
-					"python",
 					"ocaml_mlx",
+					"python",
 				},
 				sync_install = false,
 				indent = {

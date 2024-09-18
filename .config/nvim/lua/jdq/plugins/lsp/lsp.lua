@@ -106,6 +106,7 @@ return {
 		lspconfig["ocamllsp"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "ocaml", "ocaml_mlx" },
 		})
 
 		lspconfig["pyright"].setup({
@@ -131,7 +132,7 @@ return {
 			},
 		})
 
-		lspconfig["tsserver"].setup({
+		lspconfig["ts_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
