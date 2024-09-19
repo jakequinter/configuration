@@ -3,18 +3,14 @@ return {
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"yamatsum/nvim-nonicons",
-		"kyazdani42/nvim-web-devicons",
 	},
 	config = function()
 		local telescope = require("telescope")
-		local actions = require("telescope.actions")
 		local builtin = require("telescope.builtin")
-		local icons = require("nvim-nonicons")
 
 		telescope.setup({
 			defaults = {
-				prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+				prompt_prefix = "  ",
 				selection_caret = " ❯ ",
 				entry_prefix = "   ",
 			},

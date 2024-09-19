@@ -39,9 +39,6 @@ return {
 			vim.keymap.set("n", "<leader>vrn", function()
 				vim.lsp.buf.rename()
 			end, opts)
-			-- vim.keymap.set("i", "<C-h>", function()
-			-- 	vim.lsp.buf.signature_help()
-			-- end, opts)
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -49,7 +46,6 @@ return {
 		local lexical_config = {
 			filetypes = { "elixir", "eelixir", "heex" },
 			cmd = { vim.fn.expand("~/Developer/oss/lexical/_build/dev/package/lexical/bin/start_lexical.sh") },
-			-- cmd = { "/my/home/projects/_build/dev/package/lexical/bin/start_lexical.sh" },
 			settings = {},
 		}
 
@@ -73,12 +69,6 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
-
-		-- lspconfig["elixirls"].setup({
-		-- 	cmd = { os.getenv("HOME") .. "/.local/share/nvim/mason/bin/elixir-ls" },
-		-- 	capabilities = capabilities,
-		-- 	on_attach = on_attach,
-		-- })
 
 		lspconfig["html"].setup({
 			capabilities = capabilities,
@@ -104,9 +94,29 @@ return {
 		})
 
 		lspconfig["ocamllsp"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "ocaml", "ocaml_mlx" },
+			manual_install = true,
+			cmd = { "dune", "exec", "ocamllsp" },
+			settings = {
+				codelens = { enable = true },
+				inlayHints = { enable = true },
+				syntaxDocumentation = { enable = true },
+			},
+			get_language_id = function(_, filetype)
+				-- vim.notify("Filetype: " .. filetype)
+				if filetype == "ocaml_mlx" then
+					return "ocaml"
+				end
+				return filetype
+			end,
+			filetypes = {
+				"ocaml",
+				"ocaml_interface",
+				"ocaml_mlx",
+				"reason",
+			},
+			server_capabilities = {
+				semanticTokensProvider = false,
+			},
 		})
 
 		lspconfig["pyright"].setup({
