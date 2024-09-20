@@ -22,8 +22,7 @@ return {
 				vim.lsp.buf.workspace_symbol()
 			end, opts)
 			vim.keymap.set("n", "<leader>vd", function()
-				vim.notify("Attempting to open diagnostics")
-
+				-- vim.notify("Attempting to open diagnostics")
 				vim.diagnostic.open_float()
 			end, opts)
 			vim.keymap.set("n", "[d", function()
@@ -106,7 +105,7 @@ return {
 			-- 	syntaxDocumentation = { enable = true },
 			-- },
 			get_language_id = function(_, filetype)
-				vim.notify("Filetype: " .. filetype)
+				-- vim.notify("Filetype: " .. filetype)
 				if filetype == "ocaml_mlx" then
 					return "ocaml"
 				end
