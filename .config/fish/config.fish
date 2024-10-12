@@ -2,18 +2,6 @@
 # Fish uses `fish_add_path` instead of `export PATH` modify $PATH.
 fish_add_path "/opt/homebrew/bin/"
 
-# set -U neofetch_run_once 0
-#
-# function fish_greeting -d "Greeting message on shell session start up"
-#   set -l current_pid %self
-#   set -l lowest_pid (ps -eo pid=,args= | string match '*fish*' | awk '{print $1}' | sort -n | head -n 1)
-#
-#   # run neofetch on first shell
-#   if test "$current_pid" -eq "$lowest_pid"
-#     neofetch
-#   end
-# end
-
 set fish_greeting
 
 starship init fish | source
@@ -61,9 +49,16 @@ set -gx PATH $PNPM_HOME $PATH
 set -gx BUN_INSTALL $HOME/.bun
 set -gx PATH $BUN_INSTALL/bin $PATH
 
+
+
 # alias
 alias vim="nvim"
 alias vt='vim "+terminal"'
+
+# python3
+alias python="python3"
+alias pip="pip3"
+
 
 # docker 
 alias dcu="docker compose up"

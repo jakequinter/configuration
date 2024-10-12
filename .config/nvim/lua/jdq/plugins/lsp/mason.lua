@@ -21,7 +21,6 @@ return {
 				"html",
 				"lua_ls",
 				"rescriptls",
-				"pyright",
 				"tailwindcss",
 				"ts_ls",
 			},
@@ -35,7 +34,6 @@ return {
 				"eslint",
 				"isort",
 				"prettier",
-				"pylint",
 				"stylua",
 			},
 		})
